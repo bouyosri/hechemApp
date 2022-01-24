@@ -1,0 +1,41 @@
+<div style="padding-top: 60px;">
+    
+
+
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Nom</label>
+    <div class="col-sm-10">
+      <input type="text" [ngModel]="nom" (change)="setnom($event)"  class="form-control" id="inputEmail3" placeholder="{{action.nom}}" value="{{action.nom}}">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">prixEntree</label>
+    <div class="col-sm-10">
+      <input type="number" [ngModel]="prixEntree" (change)="setprixEntree($event)" value="{{action.prixEntree}}" class="form-control" id="inputEmail3" min="0">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">nombreAction</label>
+    <div class="col-sm-10">
+      <input type="text" [ngModel]="nombreAction" (change)="setnombreAction($event)" class="form-control" id="inputEmail3" value="{{action.nombreAction}}" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">description</label>
+    <div class="col-sm-10">
+      <textarea   class="form-control" (change)="setdescription($event)" id="inputEmail3" > {{action.description}}</textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">dateMarche</label>
+    <div class="col-sm-10">
+      <input type="datetime-local" value="2013-10-24T20:36:00" step="1" [ngModel]="dateMarche" class="form-control" (change)="setdateMarche($event)"   id="inputEmail3" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" (click)="editAction()" class="btn btn-primary">Edit Action</button>
+    </div>
+  </div>
+
+</div>
